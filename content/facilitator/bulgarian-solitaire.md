@@ -85,7 +85,7 @@ We can still identify the longest sequence, which starts at **(1,1,1,1,1,1,1,1)*
 
 Depending on the starting point, we can either end up at:  
 a 4 arrangement loop: **(4,3,1)**, **(3,3,2)**, **(3,2,2,1)** and **(4,2,1,1)**  
-a 2 arrangement loop: **(3,3,1,1)** and **(4,2,2)**
+a 2 arrangement loop: **(3,3,1,1)** and **(4,2,2)**  
 (Have a look at the video link below to see why this is!)
 
 If you would like to explore the ideas of this puzzle further, here are some excellent resources:
