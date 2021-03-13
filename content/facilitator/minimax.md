@@ -1,56 +1,61 @@
-# MiniMax Algorithm
+# Colouring Maps
 
 ## Introduction
 
-These games provide a introduction to the *MiniMax Algorithm*, an important tool in computer science and “game theory”. The MiniMax Algorithm is a method to work out the best way to act in order to minimise loses, or to achieve the *best outcome in a worstcase scenario* (like if our opponent plays optimally).
+This seemingly simple problem manages to disguise some very nice mathematics related to the field of graph theory.
 
-The first game is deliberately simpler, and hopefully students will be able to apply the same principles to a more complicated example in the second game (see Extension Section). 
+Students may design their own maps or use the one given in the question, they should not need more than four colours to fill their map, although they will not know this initially (see Extension section for proof).
 
 ## Solution
 
-For the first game, say we are trying to achieve the highest score possible and our opponent the lowest (as in part a).
+For the map given in the question, we can show that the map can be coloured using four colours. In fact, we will see that it cannot be done in any fewer.
 
-We know that our opponent will get the second move, and so they will choose the lowest of the two options available to them. As such, we can predict how they will move from each possible point.
+The majority of the map can be coloured using just two colours, take blue and green:
 
-<img src="../../images/minimax-3.png" width=300>
+<img src="../../images/colouring-maps-05.png" width=300>
 
-So, if we move to the left, our opponent will move right to score 3. If we move right, our opponent will move left to score 4. This means that we will get a higher score from moving right, so that is what we should do.
+At this point, we wish to colour the region in the top left corner. Since it shares edges with both blue and green regions, we must introduce a third colour, say red. This is also true for the region in the bottom right corner.
 
-This is despite the fact that, ideally, we would like to land on the 9, the highest result. However, since we know that our opponent is going to choose the lower of the two options, by moving right we *achieve the best outcome from the worst-case scenario*.
+<img src="../../images/colouring-maps-06.png" width=300>
 
-This process of working backwards, considering the result of being in each position, is how the MiniMax Algorithm works.
+Now we want to colour the star-shaped region. However, the star shares edges with a blue, a green and a red region so we must introduce a fourth colour. Yellow seems appropriate.
 
-By the same logic, for part b, we should more right to obtain the lowest score possible. This way we will get a 6, whereas moving left we would get a 9.
+<img src="../../images/colouring-maps-07.png" width=300>
+
+And so, we have coloured this map using exactly four colours. Clearly, we could have used more colours (we could, for example, use a different colour for each of the 29 sections). But, having seen that we were required to introduce four different colours, we could not have used less.
 
 ## Extension
 
-For the second game, there are many more possible routes through the map, making the situation more complicated. But by working backwards and applying the same logic, we can work out how to play optimally.
+We can ask the question, is there a smallest number of colours which will be able to colour in any given map? The answer is yes, and it is 4. Students may notice this pattern from trying lots of different maps, however showing it conclusively is a problem that went unsolved for many years. The proof of this problem is considered to be the first computer-aided proof of a major theorem.
 
-Starting by considering our opponents move on the second to bottom row, from which they will always choose the minimise the total by moving to the smaller of their two options:
+While we cannot tackle the entire problem here, we can prove a simpler result. We will show that we can always colour a map with *five regions* using a maximum of four colours. In order to do this, we first need to think of our maps in a slightly different way.
 
-- If they are moving from the 0, they will go right to the −1.
-- If they are moving from the leftmost +2, they will go left to the −1.
-- If they are moving from the rightmost +2, they will go left to the 0.
-- If they are moving from the leftmost −1, they will move right to the +1.
-- If they are moving from the −2, they will move left to the +1.
-- If they are moving from the rightmost −1, they will move right to the −1.
+Specifically, we are going to translate the maps into mathematical *graphs* (likely not the type of graph that you are used to). To do this we will:
+- Replace the different regions on the map with circles.
+- Connect up the circles representing regions which share edges using lines. 
 
-So, when choosing our move from the third to bottom row, we must consider the total result of each direction including how our opponent will move subsequently (in blue below).
+(We usually refer to these circles as *vertices*, and the lines as *edges*. This is somewhat confusing, but "edges" is used with two different meanings in this question. It can refer to the boundaries of a region, or a connection between vertices.)
 
-<img src="../../images/minimax-4.png" width=400>
+Let us take a portion of the example map and turn it into a graph. For the part in the bottom-right corner:
 
-Wishing to achieve the highest total possible, we should choose to move to the largest total (blue number) possible from any position:
+<img src="../../images/colouring-maps-08.png" width=300>
 
-<img src="../../images/minimax-5.png" width=400>
+Notice how our previous rule, that regions which share an edge cannot be the same colour, is maintained in the graph as no two connected vertices can be of the same colour.
 
-Notice how, from the 0, even though the choice is between two ‘+2’s the total achieved from each move is different. We should move right for a better overall score.
+Also notice that the graph does not have any intersecting edges. In fact, any graph which represents a valid map can be drawn without any edges intersecting.
 
-From this point, our opponent (playing optimally) will move from any point in the fourth to bottom row to minimise the total achieved. And we can continue this process of deduction upwards through each row:
+Knowing these two things will allow us to prove that we can always colour a five-region map using four colours or less. This is equivalentl to the statement that it is not possible to construct a map with five-regions which requires five different colours. Such a map would be represented by a five-vertex graph where each vertex is connected to the other four and so none can have the same colour. We can attempt to construct such a graph to see that it is impossible.
 
-<img src="../../images/minimax-6.png" width=400>
+Firstly, from the example map, it is possible to make a graph with four vertices where all are connected to each other and none of the lines intersect:
 
-And so, knowing how each player should move from any given position, we can deduce the route which the game will take if each player plays optimally:
+<img src="../../images/colouring-maps-09.png" width=200>
 
-<img src="../../images/minimax-7.png" width=400>
+If we now try to add a fifth vertex, there are 4 areas where we could try to do so:
+- In any of the three small triangles formed by connecting the Yellow vertex with two others. 
+- Outside the large triangle formed by the Red, Green and Blue vertices.
 
-Counter-intuitively, to score the highest total, we should move to the +1 on our first turn as opposed to the +2! This will allow us to get an overall total of +1, whereas by moving to the +2 the best we can get is 0.
+<img src="../../images/colouring-maps-10.png" width=200>
+
+However, in each case, we can only connect up the additional vertex to three others without any edges crossing. This means that they do not, in fact, have to take a new colour and we can still colour the graph with four colours.
+
+<img src="../../images/colouring-maps-11.png" width=200>
