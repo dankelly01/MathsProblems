@@ -18,6 +18,6 @@ Finally, travelling 1km north, towards the north pole, brings the journey back t
 
 It may be more obvious to see this with a diagram:
 
-<img src="../../images/where-on-earth-1.png" width=300>
+<img src="../../images/where-on-earth-1.png" width=400>
 
 ## Extension
