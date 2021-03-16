@@ -14,9 +14,9 @@ For example, you can play with 7 blocks and start by creating two stacks of 5 an
 
 <img src="../../images/bulgarian-solitaire-01.png" width=75>
 
-To play the game, you need to rearrange the blocks in a certain way.
-
-Firstly, remove one block from the top of each existing pile and use these to form a new one. Then rearrange the new piles to be in height order from left to right:
+To play the game, you need to rearrange the blocks in a certain way.  
+Firstly, remove one block from the top of each existing pile and use these to form a new one.  
+Then rearrange the new piles to be in height order from left to right.
 
 <img src="../../images/bulgarian-solitaire-02.png" width=350>
 
