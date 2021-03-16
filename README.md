@@ -12,3 +12,4 @@ Maths problems for SAMI Maths Club App
 [konigsberg-bridges](https://www.flaticon.com/free-icon/bridge_699611?term=bridge&page=1&position=33&related_id=699611&origin=search)  
 [minimax-algorithm](https://www.flaticon.com/free-icon/flow_759779?term=flow%20diagram&related_id=759779)  
 [tetris-shapes](https://www.flaticon.com/free-icon/tetris_751000?term=tetris&page=1&position=2&related_id=751000&origin=search)  
+[where-on-earth](https://www.flaticon.com/free-icon/globe_3626838?term=globe&page=1&position=41&page=1&position=41&related_id=3626838&origin=search)
