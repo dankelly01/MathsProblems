@@ -6,7 +6,7 @@ As mentioned in the task speed, distance and time are three important and relate
 
 For the first problem in particular, students should know that speed, distance and time are related by $S = \frac{D}{T}$ and should also be able to manipulate this equation to solve for any of the three variables. It can be helpful to remember this triangle:
 
-<img scr="../../images/sdt-riddles-1.png" width=300>
+<img scr="../../../images/sdt-riddles-1.png" width=300>
 
 ## Solution
 
