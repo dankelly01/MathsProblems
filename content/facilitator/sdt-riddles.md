@@ -4,8 +4,7 @@
 
 As mentioned in the task speed, distance and time are three important and related concepts in many mathematical fields. These are some nice problems and riddles which are linked to these measurements.
 
-For the first problem in particular, students should know that speed, distance and time are related by $S = \frac{D}{T}$ and should also be able to manipulate this equation to solve for any of the three variables. It can be helpful to remember this triangle:
-
+For the first problem in particular, students should know that speed, distance and time are related by $S = \frac{D}{T}$ and should also be able to manipulate this equation to solve for any of the three variables. It can be helpful to remember this triangle:  
 
 <img src="../../images/sdt-riddles-1.png" width=100>
 
