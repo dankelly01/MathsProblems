@@ -13,7 +13,7 @@ Therefore the average speed for the whole journey must be closer to 30km/h than 
 
 If this is not clear, we can also do a calculation. Letting the distance between the nest and the tree be $d$,  
 
-*Time for the first leg:* $t_1 = \frac{d}{30}$
+*Time for the first leg:* $t_1 = \frac{d}{30}$  
 *Time for the second leg:* $t_2 = \frac{d}{60}$
 
 *Total time:* $T = \frac{d}{30} + \frac{d}{60} = \frac{3d}{60} = \frac{d}{20}$
