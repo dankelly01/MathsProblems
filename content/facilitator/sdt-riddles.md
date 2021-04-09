@@ -1,4 +1,4 @@
-# Bulgarian Solitaire
+# Speed, Distance, Time Riddles
 
 ## Introduction
 
