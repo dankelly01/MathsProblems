@@ -13,5 +13,5 @@ Maths problems for SAMI Maths Club App
 [minimax-algorithm](https://www.flaticon.com/free-icon/flow_759779?term=flow%20diagram&related_id=759779)  
 [tetris-shapes](https://www.flaticon.com/free-icon/tetris_751000?term=tetris&page=1&position=2&related_id=751000&origin=search)  
 [where-on-earth](https://www.flaticon.com/free-icon/globe_3626838?term=globe&page=1&position=41&page=1&position=41&related_id=3626838&origin=search)
-[sdt-riddles](https://www.flaticon.com/free-icon/stopwatch_3203216?term=speed&page=1&position=40&page=1&position=40&related_id=3203216&origin=search)
+[sdt-riddles](https://www.flaticon.com/free-icon/stopwatch_3203216?term=speed&page=1&position=40&page=1&position=40&related_id=3203216&origin=search)  
 [prisoners-problem](https://www.flaticon.com/free-icon/prisoner_3782236?term=prison&page=1&position=7&page=1&position=7&related_id=3782236&origin=search)
