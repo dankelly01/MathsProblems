@@ -63,3 +63,28 @@ There are lots of other ways which you could achieve this but they all share the
 See if you can come up with other systems for winning this game, now that you know the core principal behind all of them.
 
 ## Extension
+
+As mentioned in the introduction, it is possible to play this game and win with more coins. Specifically, the game has a guarenteed winning strategy whenever the number of coins is a square power of 2. So 4 ($$2^2$$) is the smallest number of coins with which you can play, you could also use 16 ($$4^2$$), 64 ($$8^2$$), 256 ($$16^2$$) and so on.
+
+Have a look at this video where the problem is set up using a chess board (with 64 squares):
+[The almost impossible chessboard puzzle](https://www.youtube.com/watch?v=as7Gkm7Y7h4)
+
+With all of the numbers of coins above, the method for finding a system is the exact same as with 4 coins. Taking 64 as an example, there are $$2^6$$ coins which could possibly be indicated all of which can be represented by a 6 digit binary number. So the question is can we find a way to generate this number such that we are able to change any number of the digits by flipping exactly one coin?
+
+We might ask how many ways are there to select some number of the six digits which need to be changed:
+- There is just 1 way we can select no digits.
+- There are 6 ways that we can select one digit.
+- There are "6 choose 2" = 15 ways to select two digits.
+- There are "6 choose 3" = 20 ways to select three digits.
+- There are "6 choose 4" = 15 ways to select four digits.
+- There are "6 choose 5" = 6 ways to select five digit.
+- There is 1 way we can select six digits.
+
+And if each of these needs to be represented by a unique coin, we would need at least $$1 + 6 + 15 + 20 + 15 + 6 + 1 = 64$$ coins. Conveniently, we have exactly the right amount!
+
+In fact, the reason the number of coins needs to be a square power of 2 is to satisfy this condition that there are enough coins to represent each possible way to select some number of digits to be changed.
+
+Now that we know we have enough coins to theoretically represent every possible change to the 6-digit binary number, we just need to devise a way "read" the system which allows us to change any number of the digits. Here is one nice solution:
+
+
+
