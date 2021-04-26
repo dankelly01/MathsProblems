@@ -16,7 +16,7 @@ The next important thing to work out is how much information we are going to nee
 
 We could do this as follows:
 
-<img src="../../images/prisoners-problem-2.png" width=300>
+<img src="../../images/prisoners-problem-02.png" width=300>
 
 Where the first digit describes the row of the indicated coin (0 for the top and 1 for the bottom) and the second digit tells us the column (0 for left and 1 for right).
 
@@ -24,19 +24,19 @@ So we have managed to devise a system where we only need to pass on two digits, 
 
 Let's imagine the inital set up of coins is like this:
 
-<img src="../../images/prisoners-problem-3.png" width=300>
+<img src="../../images/prisoners-problem-03.png" width=300>
 
 If the top-left coin is indicated, this is already what our cell mate is going to read. So we can flip either of the bottom two coins and our set up works.
 
-<img src="../../images/prisoners-problem-4.png" width=300>
+<img src="../../images/prisoners-problem-04.png" width=300>
 
 If the top-right coin is indicated, we can flip the top-right coin to tails to change the number which our cell mate will read to 01.
 
-<img src="../../images/prisoners-problem-5.png" width=300>
+<img src="../../images/prisoners-problem-05.png" width=300>
 
 Similarly, if the bottom-left coin is indicated, we can flip the top-left coin to tails to change the number to 10.
 
-<img src="../../images/prisoners-problem-6.png" width=300>
+<img src="../../images/prisoners-problem-06.png" width=300>
 
 But what if the bottom-right coin is indicated? Since we can't change both of the top coins to tails we are going to need to find another way to change the *meaning* of the top coins to 11. This could be achieved by swapping what digits the heads and tails each represent, if our cell mate reads heads as a 1 then we don't need to change either of the top coins and we have a set up which reads 11.
 
@@ -47,7 +47,7 @@ So, instead of having a pre-arranged meaning of heads and tails, we need to find
 - If the bottom-left coin is indicated, we can flip the top-left coin as before.
 - If the bottom-right coin is indecated, we can flip the bottom-left coin so that our cell mate reads heads as 1s.
 
-<img src="../../images/prisoners-problem-7.png" width=300>
+<img src="../../images/prisoners-problem-07.png" width=300>
 
 So we have a system which works! But can we know that it will always work for any given set up? To see this, think about how flipping each coin changes how the system is read.
 
@@ -86,5 +86,36 @@ In fact, the reason the number of coins needs to be a square power of 2 is to sa
 
 Now that we know we have enough coins to theoretically represent every possible change to the 6-digit binary number, we just need to devise a way "read" the system which allows us to change any number of the digits. Here is one nice solution:
 
+We will assign binary numbers to the spaces in the grid sequentially starting at 000000 in the top-left and working across left to right and then down the rows to 111111 in the bottom-right.
 
+To "read" the grid, each digit is going to be associated with a region of the grid. To work out the digit, count the number of heads in the region. If there is an even number of heads then the digit is a 0 and if there are an odd number of heads the digit is a 1.
 
+The regions are as follows.
+
+First digit:
+
+<img src="../../images/prisoners-problem-08.png" width=200>
+
+Second digit:
+
+<img src="../../images/prisoners-problem-09.png" width=200>
+
+Third digit:
+
+<img src="../../images/prisoners-problem-10.png" width=200>
+
+Fourth digit:
+
+<img src="../../images/prisoners-problem-11.png" width=200>
+
+Fifth digit:
+
+<img src="../../images/prisoners-problem-12.png" width=200>
+
+Sixth digit:
+
+<img src="../../images/prisoners-problem-13.png" width=200>
+
+In order to change a digit, you just need to flip a coin that is in that region to change the number of heads by one and so go either from even to odd (0 to 1) or odd to even (1 to 0).
+
+So you would need to first of all work out the number the that the system reads initially, then compare that to the number of the indicated square and work out which digits you need to change. Then find the appropriate sqaure which lies in all of the regions of the digits to be changed and flip that coin. Your cell mate can then come in and read the grid in the same way you did, and this will tell them which square was indicated.
