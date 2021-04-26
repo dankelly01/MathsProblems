@@ -66,7 +66,7 @@ See if you can come up with other systems for winning this game, now that you kn
 
 As mentioned in the introduction, it is possible to play this game and win with more coins. Specifically, the game has a guarenteed winning strategy whenever the number of coins is a square power of 2. So 4 ($$2^2$$) is the smallest number of coins with which you can play, you could also use 16 ($$4^2$$), 64 ($$8^2$$), 256 ($$16^2$$) and so on.
 
-Have a look at this video where the problem is set up using a chess board (with 64 squares):
+Have a look at this video where the problem is set up using a chess board (with 64 squares):  
 [The almost impossible chessboard puzzle](https://www.youtube.com/watch?v=as7Gkm7Y7h4)
 
 With all of the numbers of coins above, the method for finding a system is the exact same as with 4 coins. Taking 64 as an example, there are $$2^6$$ coins which could possibly be indicated all of which can be represented by a 6 digit binary number. So the question is can we find a way to generate this number such that we are able to change any number of the digits by flipping exactly one coin?
