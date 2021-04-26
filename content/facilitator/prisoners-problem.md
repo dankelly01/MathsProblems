@@ -52,7 +52,7 @@ So, instead of having a pre-arranged meaning of heads and tails, we need to find
 So we have a system which works! But can we know that it will always work for any given set up? To see this, think about how flipping each coin changes how the system is read.
 
 - Flipping the top-left coin changes just the first digit of the number our cell mate reads.
-- FLipping the top-right coin changes just the second digit.
+- Flipping the top-right coin changes just the second digit.
 - Flipping the bottom-left coin will change both of the digits.
 - Flipping the bottom right coin will not change any of the digits.
 
