@@ -19,7 +19,7 @@ For an example, you could encounter a situation like this:
 
 <img src="../../images/prisoners-problem-1.png" width=200>
 
-You would then be allowed to turn any of the white coins to black, or turn the black coin to white. You cell mate would then have to indicate the top-left coin in order to win.
+You would then be allowed to turn any of the three heads to tails, or turn the tail coin to a head. You cell mate would then have to indicate the top-left coin in order to win.
 
 There is no way for you and your cell mate to communicate once they leave the room, all you are allowed to do is turn over one coin.
 
