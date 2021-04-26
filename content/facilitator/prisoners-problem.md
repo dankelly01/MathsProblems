@@ -16,7 +16,7 @@ The next important thing to work out is how much information we are going to nee
 
 We could do this as follows:
 
-<img src="../../images/prisoners-problem-2.png" width=200>
+<img src="../../images/prisoners-problem-2.png" width=300>
 
 Where the first digit describes the row of the indicated coin (0 for the top and 1 for the bottom) and the second digit tells us the column (0 for left and 1 for right).
 
@@ -24,19 +24,19 @@ So we have managed to devise a system where we only need to pass on two digits, 
 
 Let's imagine the inital set up of coins is like this:
 
-<img src="../../images/prisoners-problem-3.png" width=200>
+<img src="../../images/prisoners-problem-3.png" width=300>
 
 If the top-left coin is indicated, this is already what our cell mate is going to read. So we can flip either of the bottom two coins and our set up works.
 
-<img src="../../images/prisoners-problem-4.png" width=200>
+<img src="../../images/prisoners-problem-4.png" width=300>
 
 If the top-right coin is indicated, we can flip the top-right coin to tails to change the number which our cell mate will read to 01.
 
-<img src="../../images/prisoners-problem-5.png" width=200>
+<img src="../../images/prisoners-problem-5.png" width=300>
 
 Similarly, if the bottom-left coin is indicated, we can flip the top-left coin to tails to change the number to 10.
 
-<img src="../../images/prisoners-problem-6.png" width=200>
+<img src="../../images/prisoners-problem-6.png" width=300>
 
 But what if the bottom-right coin is indicated? Since we can't change both of the top coins to tails we are going to need to find another way to change the *meaning* of the top coins to 11. This could be achieved by swapping what digits the heads and tails each represent, if our cell mate reads heads as a 1 then we don't need to change either of the top coins and we have a set up which reads 11.
 
@@ -47,7 +47,7 @@ So, instead of having a pre-arranged meaning of heads and tails, we need to find
 - If the bottom-left coin is indicated, we can flip the top-left coin as before.
 - If the bottom-right coin is indecated, we can flip the bottom-left coin so that our cell mate reads heads as 1s.
 
-<img src="../../images/prisoners-problem-7.png" width=200>
+<img src="../../images/prisoners-problem-7.png" width=300>
 
 So we have a system which works! But can we know that it will always work for any given set up? To see this, think about how flipping each coin changes how the system is read.
 
