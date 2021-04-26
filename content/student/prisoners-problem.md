@@ -17,7 +17,7 @@ The game goes as follows:
 
 For an example, you could encounter a situation like this:
 
-<img src="../../images/prisoners-problem-1.png" width=300>
+<img src="../../images/prisoners-problem-01.png" width=300>
 
 You would then be allowed to turn any of the three heads to tails, or turn the tail coin to a head. You cell mate would then have to indicate the top-left coin in order to win.
 
