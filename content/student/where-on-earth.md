@@ -1,5 +1,5 @@
 ---
-title: Where On Earth?
+title: Where On Earth
 type: problem
 printOrder: n/a
 added: 2021-03
